@@ -20,6 +20,7 @@ class Application
       else
         cart_response = @@cart.collect {|item| "#{item}\n"}
       end
+      resp.write cart_response
     else
       resp.write "Path Not Found"
     end
