@@ -18,7 +18,7 @@ class Application
       if @@cart.empty?
         cart_response = "Your cart is empty."
       else
-        @@cart.collect {|item| "#{item}\n"}
+        cart_response = @@cart.collect {|item| "#{item}\n"}
       end
     else
       resp.write "Path Not Found"
